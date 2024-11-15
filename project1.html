@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+body{
+    background-color: black;
+}
+h2 {
+    color:aquamarine;
+text-align:center;
+}
+.txt {
+    font-size: 185px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align: center;
+    color:aquamarine;
+    }
+    input{
+        background-color: aquamarine;
+        font-size: 35px;
+    }
+
+</style>
+<script>
+     let timesClicked = 0
+     let interval = 1
+    function buyUpgrade(){
+        if(timesClicked>= 100) {
+            timesClicked = timesClicked - 100
+            interval = interval + 1
+            text.innerText = timesClicked
+        }
+    }
+
+
+    function buttonClicked() {
+timesClicked = timesClicked + interval
+        text = document.getElementById("count")
+        text.innerText = timesClicked
+    }
+
+</script>
+    </head>
+    <body>
+        <h1 class="txt">
+            Riley Clicker
+        </h1>
+        <center><input type="button" value="Riley"onClick="buttonClicked()"></center>
+        <h2 id="count">
+        </h2>
+        <center><input type="button" value="Tier 1" onClick ="buyUpgrade()"></center>
+    </body>
+</html>
+
